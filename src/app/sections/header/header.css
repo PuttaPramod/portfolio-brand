@@ -137,7 +137,7 @@ Logo
 
     0 0 25px rgba(124,58,237,.6);
 
-    transition:.35s;
+  
 
 }
 
@@ -180,6 +180,7 @@ Menu
 }
 
 .nav-links a{
+    
 
     text-decoration:none;
 
@@ -231,6 +232,10 @@ Menu
 
 }
 
+.logo-text{
+    display:none;
+}
+
 .nav-links a:hover::after,
 
 .nav-links a.active::after{
@@ -267,11 +272,7 @@ Resume Button
 
     font-weight:600;
 
-    background:
-
-    linear-gradient(135deg,
-    var(--primary),
-    var(--secondary));
+    background:linear-gradient(135deg,#8b5cf6,#7c3aed);
 
     transition:.35s;
 
@@ -346,12 +347,12 @@ display:block;
 }
 
 .logo-text{
-
-display:none;
-
+    display:block;
+    padding-left:10px;
 }
 
 .nav-links{
+    
 
 display:none;
 
@@ -406,6 +407,7 @@ pointer-events:auto;
 }
 
 .mobile-menu a{
+    text-align:center;
 
 color:white;
 
@@ -416,15 +418,17 @@ font-size:17px;
 font-weight:500;
 
 }
+.mobile-menu a:hover{
+
+    background-color: rgba(124,58,237,.15);
+
+}
 
 .resume-mobile{
 
 margin-top:10px;
 
-background:linear-gradient(
-135deg,
-var(--primary),
-var(--secondary));
+background:linear-gradient(135deg,#8b5cf6,#7c3aed);
 
 padding:14px;
 
@@ -554,15 +558,6 @@ html{
 
 }
 
-/* ==========================================
-   Logo Glow
-========================================== */
-
-.logo-circle{
-
-    animation:logoFloat 5s ease-in-out infinite;
-
-}
 
 @keyframes logoFloat{
 
@@ -591,7 +586,7 @@ html{
 }
 
 .nav-links a{
-
+    
     padding:6px 0;
 
 }
