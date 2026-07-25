@@ -1,73 +1,95 @@
-<section class="contact" id="contact">
+<section class="contact">
 
     <div class="contact-form">
 
-        <div class="form-header">
+        <div class="contact-header">
 
-            <span>CONTACT</span>
+            <span>GET IN TOUCH</span>
 
             <h2>Let's Work Together</h2>
 
             <p>
-                Have a project in mind or want to collaborate?
-                Feel free to send me a message.
+                Have a project in mind or just want to say hello?
+                Fill out the form below and I'll get back to you as soon as possible.
             </p>
 
         </div>
 
-        <form>
+        <form [formGroup]="contactForm"
+              (ngSubmit)="sendMessage()">
+
+            <!-- Name -->
 
             <div class="input-group">
+
+                <i class="bi bi-person"></i>
 
                 <input
                     type="text"
-                    placeholder=" "
-                    required>
-
-                <label>Full Name</label>
+                    formControlName="name"
+                    placeholder="Your Name">
 
             </div>
 
+            <!-- Email -->
+
             <div class="input-group">
+
+                <i class="bi bi-envelope"></i>
 
                 <input
                     type="email"
-                    placeholder=" "
-                    required>
-
-                <label>Email Address</label>
+                    formControlName="email"
+                    placeholder="Email Address">
 
             </div>
 
+            <!-- Subject -->
+
             <div class="input-group">
+
+                <i class="bi bi-chat-square-text"></i>
 
                 <input
                     type="text"
-                    placeholder=" ">
-
-                <label>Subject</label>
+                    formControlName="subject"
+                    placeholder="Subject">
 
             </div>
 
-            <div class="input-group">
+            <!-- Message -->
+
+            <div class="input-group textarea-group">
+
+                <i class="bi bi-pencil-square"></i>
 
                 <textarea
                     rows="6"
-                    placeholder=" "
-                    required>
-                </textarea>
-
-                <label>Your Message</label>
+                    formControlName="message"
+                    placeholder="Write your message..."></textarea>
 
             </div>
 
+            <!-- Button -->
+
             <button
+                class="send-btn"
                 type="submit"
-                class="send-btn">
+                [disabled]="loading || contactForm.invalid">
 
-                <i class="bi bi-send-fill"></i>
+                @if(loading){
 
-                Send Message
+                    <span class="spinner-border spinner-border-sm"></span>
+
+                    <span>Sending...</span>
+
+                }@else{
+
+                    <i class="bi bi-send-fill"></i>
+
+                    <span>Send Message</span>
+
+                }
 
             </button>
 

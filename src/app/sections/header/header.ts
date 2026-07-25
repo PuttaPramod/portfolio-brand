@@ -23,6 +23,7 @@ export class Header {
       'skills',
       'projects',
       'experience',
+      'achievements',
       'contact'
     ];
 

@@ -28,52 +28,52 @@ export class Achievements {
       icon: 'bi bi-award-fill',
       year: 'Feb 2026',
       color: '#8b5cf6',
-      certificate: 'images/Internship Cert.png'
+      certificate: 'certificates/Internship Cert.png'
     },
 
     {
       title: 'Angular Couse',
       description: 'Successfully completed Angular Course on Infosys Springboard.',
       icon: 'bi bi-code-slash',
-      year: '2026',
+      year: 'Jan 2025',
       color: '#06b6d4',
-      certificate: 'images/Angular Cert.png'
+      certificate: 'certificates/Angular Cert.png'
     },
 
     {
       title: 'IoT',
       description: 'I Completed IoT Course on NPTEL.',
       icon: 'bi bi-broadcast-pin',
-      year: '2026',
+      year: 'Nov 2024',
       color: '#10b981',
-      certificate: 'images/IoT Cert.png'
+      certificate: 'certificates/IoT Cert.png'
     },
 
     {
       title: 'JavaScript',
       description: 'I Certified a JavaScript Intermediate on HackerRank.',
       icon: 'bi bi-terminal-fill',
-      year: '2026',
+      year: 'Apr 2025',
       color: '#ef4444',
-      certificate: 'images/JavaScript HR.png'
+      certificate: 'certificates/JavaScript HR.png'
     },
 
     {
       title: 'Agentic Force Specialist',
       description: 'I Certified as an Agentic Force Specialist on Salesforce.',
       icon: 'bi bi-robot',
-      year: '2026',
+      year: 'Jan 2026',
       color: '#f97316',
-      certificate: 'images/AgentForce Specialist Certificate.png'
+      certificate: 'certificates/AgentForce Specialist Certificate.png'
     },
 
     {
       title: 'Python',
       description: 'I Completed a Python Basics on HackerRank.',
       icon: 'bi bi-filetype-py',
-      year: '2026',
+      year: 'Oct 2024',
       color: '#3b82f6',
-      certificate: 'images/Python HR.png'
+      certificate: 'certificates/Python HR.png'
     }
 
   ];
