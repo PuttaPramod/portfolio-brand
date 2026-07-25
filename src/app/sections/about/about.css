@@ -1,0 +1,63 @@
+/*=========================
+ABOUT
+=========================*/
+
+.about{
+    padding:120px 20px;
+    background:#050816;
+    
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+.section-subtitle{
+  font-size:35px;
+    color:#8B5CF6;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-size:52px;
+    font-weight:800;
+    color:#ffffff;
+    margin-bottom:35px;
+}
+
+.section-title span{
+    background:linear-gradient(135deg,#8B5CF6,#3B82F6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.about-text{
+    max-width:1260px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:1.9;
+    color:#94A3B8;
+    font-weight:400;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .about{
+        padding:90px 20px;
+    }
+
+    .section-title{
+        font-size:38px;
+    }
+
+    .about-text{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+}

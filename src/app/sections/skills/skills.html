@@ -1,0 +1,19 @@
+<section class="skills-section" id="skills" #skillsSection [class.animate]="isVisible">
+  <div class="skills-container">
+    <div class="section-heading">
+      <h2 class="section-title">Skills</h2>
+      <p>Technologies I use to build fast, responsive, and polished web experiences.</p>
+    </div>
+
+    <div class="skills-grid">
+      @for (skill of skills; track skill.name) {
+        <div class="skill-card">
+          <div class="skill-icon-box" [style.background]="skill.color">
+            <i [class]="skill.icon"></i>
+          </div>
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="achievements" id="achievements">
+  <div class="container">
+
+    <div class="section-heading">
+        <span>ACHIEVEMENTS</span>
+        <h2>Professional Journey</h2>
+        <p>Milestones that showcase my technical growth and learning.</p>
+    </div>
+
+    <div class="achievement-grid">
+
+        @for(item of achievements; track item.title){
+
+        <div class="achievement-card">
+
+            <div class="icon"
+                 [style.background]="item.color">
+
+                <i [class]="item.icon"></i>
+
+            </div>
+
+            <h3>{{item.title}}</h3>
+
+            <p>{{item.description}}</p>
+
+            <span>{{item.year}}</span>
+
+            <button
+            class="certificate-btn"
+            (click)="openCertificate(item.certificate)">
+
+                View Certificate
+
+            </button>
+
+        </div>
+
+        }
+
+    </div>
+  </div>
+
+</section>
+
+<!-- Modal -->
+
+@if(selectedCertificate){
+
+<div
+class="certificate-modal"
+(click)="closeCertificate()">
+
+    <div
+    class="certificate-container"
+    (click)="$event.stopPropagation()">
+
+        <button
+        class="close-btn"
+        (click)="closeCertificate()">
+
+            <i class="bi bi-x-lg"></i>
+
+        </button>
+
+        <img
+        [src]="selectedCertificate"
+        alt="Certificate">
+
+    </div>
+    
+</div>
+
+}

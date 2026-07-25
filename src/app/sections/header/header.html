@@ -1,0 +1,114 @@
+<nav class="header" [class.scrolled]="isScrolled">
+
+    <div class="nav-wrapper">
+
+        <!-- Logo -->
+
+        <a href="#hero" class="logo">
+
+            <div class="logo-circle">
+                PK
+            </div>
+
+        </a>
+
+        <!-- Desktop Menu -->
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#hero" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#experience">
+                    Experience
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Resume Button -->
+
+        <a href="assets/resume.pdf" download class="resume-btn">
+
+            Resume
+
+            <i class="bi bi-arrow-up-right"></i>
+
+        </a>
+
+        <!-- Mobile Toggle -->
+
+        <button class="menu-btn" (click)="toggleMenu()">
+
+            <i class="bi" [class.bi-list]="!mobileMenu" [class.bi-x-lg]="mobileMenu">
+            </i>
+
+        </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div class="mobile-menu" [class.show]="mobileMenu">
+
+        <a href="#hero" (click)="closeMenu()">
+            Home
+        </a>
+
+        <a href="#about" (click)="closeMenu()">
+            About
+        </a>
+
+        <a href="#skills" (click)="closeMenu()">
+            Skills
+        </a>
+
+        <a href="#projects" (click)="closeMenu()">
+            Projects
+        </a>
+
+        <a href="#experience" (click)="closeMenu()">
+            Experience
+        </a>
+
+        <a href="#contact" (click)="closeMenu()">
+            Contact
+        </a>
+
+        <a href="assets/Pramod Resume.pdf" class="resume-mobile" download>
+
+            Download Resume
+
+        </a>
+
+    </div>
+
+</nav>

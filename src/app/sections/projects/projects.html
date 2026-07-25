@@ -1,0 +1,139 @@
+<section class="projects section" id="projects">
+
+  <div class="container">
+
+    <span class="section-subtitle">
+      PROJECTS
+    </span>
+
+    <h2 class="section-title">
+      Featured Projects
+    </h2>
+
+    <p class="section-description">
+      Here are some of the projects I've built, showcasing my skills in
+      full-stack development, responsive UI design, and modern web technologies.
+    </p>
+
+    <div class="stack-projects">
+
+      @for(project of projects; track project.id){
+
+      <div class="project-card">
+
+        <!-- Header -->
+
+        <div class="project-header" (click)="toggleProject(project.id)">
+
+          <div class="left">
+
+            <span class="number">
+              {{project.id < 10 ? '0' +project.id : project.id}} </span>
+
+                <h3>
+                  {{project.title}}
+                </h3>
+
+          </div>
+
+          <i class="bi" [class.bi-chevron-down]="activeProject() !== project.id"
+            [class.bi-chevron-up]="activeProject() === project.id">
+          </i>
+
+        </div>
+
+        <!-- Body -->
+
+        @if(activeProject() === project.id){
+
+        <div class="project-body">
+
+          <div class="project-image" (click)="openImage(project.image)">
+
+            <img [src]="project.image" [alt]="project.title">
+
+            <div class="zoom">
+              <i class="bi bi-zoom-in"></i>
+            </div>
+
+          </div>
+
+          <div class="project-content">
+
+            <p>
+
+              {{project.description}}
+
+            </p>
+
+            <div class="tech-stack">
+
+              @for(tech of project.technologies; track tech){
+
+              <span>
+
+                {{tech}}
+
+              </span>
+
+              }
+
+            </div>
+
+            <div class="project-links">
+
+              <a [href]="project.live" target="_blank">
+
+                <i class="bi bi-box-arrow-up-right"></i>
+
+                Live Demo
+
+              </a>
+
+              <a [href]="project.github" target="_blank">
+
+                <i class="bi bi-github"></i>
+
+                GitHub
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        }
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Image Popup -->
+
+@if(selectedImage()){
+
+<div class="image-popup" (click)="closeImage()">
+
+  <div class="popup-content" (click)="$event.stopPropagation()">
+
+    <button class="close-btn" (click)="closeImage()">
+
+      <i class="bi bi-x-lg"></i>
+
+    </button>
+
+    <img [src]="selectedImage()!" alt="Project Screenshot">
+
+  </div>
+
+</div>
+
+}
