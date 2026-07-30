@@ -87,7 +87,7 @@ export class Projects {
 
       id: 3,
 
-      title: 'PK PRODUCTS',
+      title: 'E-Shop',
 
       image: 'images/pkeshop.png',
 
@@ -95,9 +95,9 @@ export class Projects {
         'A fully featured e-commerce platform with product catalog, shopping cart, user authentication, and responsive design for seamless online shopping.',
 
       technologies: [
-        'Angular',
+        'Mongo DB',
         'TypeScript',
-        'HTML'
+        'Node JS'
       ],
 
       live: 'https://ppkeshop.netlify.app/',
