@@ -89,7 +89,7 @@ export class Projects {
 
       title: 'PK PRODUCTS',
 
-      image: 'images/pkproducts.png',
+      image: 'images/pkeshop.png',
 
       description:
         'A fully featured e-commerce platform with product catalog, shopping cart, user authentication, and responsive design for seamless online shopping.',
@@ -100,9 +100,9 @@ export class Projects {
         'HTML'
       ],
 
-      live: 'https://pkproducts.onrender.com',
+      live: 'https://ppkeshop.netlify.app/',
 
-      github: 'https://github.com/PuttaPramod/Ecommerce'
+      github: 'https://github.com/PuttaPramod/eshop'
 
     },
 
