@@ -9,55 +9,40 @@
 <app-footer></app-footer>
 
 <!-- Back To Top -->
-<button
-    class="scroll-top"
-    [class.show]="showScrollTop"
-    (click)="scrollToTop()">
+<button class="scroll-top" [class.show]="showScrollTop" (click)="scrollToTop()">
 
-    <i class="bi bi-arrow-up"></i>
+    <i class="bi bi-arrow-up-circle-fill"></i>
 
 </button>
 
 <!-- Floating Action Button -->
-<div
-    class="fab-container"
-    [class.move-up]="showScrollTop">
+<div class="fab-container" [class.move-up]="showScrollTop">
 
     <input type="checkbox" id="fab-toggle">
 
     <label for="fab-toggle" class="fab-main">
 
-        <i class="bi bi-plus-lg open-icon"></i>
+        <i class="bi bi-chat-dots-fill open-icon"></i>
+
         <i class="bi bi-x-lg close-icon"></i>
 
     </label>
 
     <div class="fab-menu">
 
-        <a
-            href="https://github.com/PuttaPramod"
-            target="_blank"
-            class="fab-item"
-            title="GitHub">
+        <a href="https://github.com/PuttaPramod" target="_blank" class="fab-item" title="GitHub">
 
             <i class="bi bi-github"></i>
 
         </a>
 
-        <a
-            href="https://www.linkedin.com/in/putta-pramod-072a622b9/"
-            target="_blank"
-            class="fab-item"
-            title="LinkedIn">
+        <a href="https://www.linkedin.com/in/putta-pramod-072a622b9/" target="_blank" class="fab-item" title="LinkedIn">
 
             <i class="bi bi-linkedin"></i>
 
         </a>
 
-        <a
-            href="https://www.instagram.com/pk_p24?igsh=MWZ4aTA4ZTJtaDdodg=="
-            target="_blank"
-            class="fab-item"
+        <a href="https://www.instagram.com/pk_p24?igsh=MWZ4aTA4ZTJtaDdodg==" target="_blank" class="fab-item"
             title="Instagram">
 
             <i class="bi bi-instagram"></i>
