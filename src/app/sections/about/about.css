@@ -1,63 +1,348 @@
-/*=========================
-ABOUT
-=========================*/
+/*==========================================================
+  ABOUT SECTION
+==========================================================*/
 
 .about{
-    padding:120px 20px;
-    background:#050816;
-    
+
+    position:relative;
+
+    padding:110px 20px;
+
+    background:#060816;
+
+    overflow:hidden;
+
 }
 
-.container{
-    max-width:1200px;
+
+/*==========================================================
+  CONTAINER
+==========================================================*/
+
+.about-container{
+
+    width:min(1000px,92%);
+
     margin:auto;
+
+}
+
+
+/*==========================================================
+  HEADING
+==========================================================*/
+
+.about-heading{
+
     text-align:center;
+
+    margin-bottom:55px;
+
 }
 
 .section-subtitle{
-  font-size:35px;
+    display:block;
+    text-align:center;
     color:#8B5CF6;
+    font-size:15px;
+    font-weight:600;
     letter-spacing:3px;
-    margin-bottom:15px;
+    text-transform:uppercase;
 }
 
-.section-title{
-    font-size:52px;
-    font-weight:800;
+.about-heading h2{
+
+    margin-top:20px;
+
     color:#ffffff;
-    margin-bottom:35px;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
 }
 
-.section-title span{
-    background:linear-gradient(135deg,#8B5CF6,#3B82F6);
+.about-heading h2 span{
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #3b82f6
+    );
+
     -webkit-background-clip:text;
+
     -webkit-text-fill-color:transparent;
+
 }
+
+
+/*==========================================================
+  CONTENT BOX
+==========================================================*/
+
+.about-content{
+
+    position:relative;
+
+    padding:38px 45px 38px 55px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.09);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+
+    transition:.35s ease;
+
+}
+
+.about-content:hover{
+
+    border-color:rgba(139,92,246,.45);
+
+    box-shadow:
+        0 25px 65px rgba(139,92,246,.12);
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==========================================================
+  LEFT ACCENT
+==========================================================*/
+
+.about-accent{
+
+    position:absolute;
+
+    left:25px;
+
+    top:32px;
+
+    bottom:32px;
+
+    width:3px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        to bottom,
+        #8b5cf6,
+        #3b82f6
+    );
+
+    box-shadow:
+        0 0 18px rgba(139,92,246,.45);
+
+}
+
+
+/*==========================================================
+  ABOUT TEXT
+==========================================================*/
 
 .about-text{
-    max-width:1260px;
-    margin:0 auto;
-    font-size:18px;
-    line-height:1.9;
-    color:#94A3B8;
+
+    margin:0;
+
+    color:#94a3b8;
+
+    font-size:17px;
+
     font-weight:400;
+
+    line-height:1.9;
+
+    letter-spacing:.1px;
+
 }
 
-/* Responsive */
 
-@media (max-width:768px){
+/*==========================================================
+  BACKGROUND GLOW
+==========================================================*/
+
+.about::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    left:-180px;
+
+    top:80px;
+
+    border-radius:50%;
+
+    background:#8b5cf6;
+
+    filter:blur(140px);
+
+    opacity:.06;
+
+    pointer-events:none;
+
+}
+
+.about::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    right:-180px;
+
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+    filter:blur(140px);
+
+    opacity:.05;
+
+    pointer-events:none;
+
+}
+
+
+/*==========================================================
+  LIGHT THEME
+==========================================================*/
+
+.light-theme .about{
+
+    background:#f8fafc;
+
+}
+
+.light-theme .about-heading h2{
+
+    color:#0f172a;
+
+}
+
+.light-theme .about-content{
+
+    background:rgba(255,255,255,.75);
+
+    border-color:rgba(15,23,42,.08);
+
+    box-shadow:
+        0 20px 50px rgba(15,23,42,.08);
+
+}
+
+.light-theme .about-text{
+
+    color:#64748b;
+
+}
+
+.light-theme .about-content:hover{
+
+    border-color:rgba(139,92,246,.4);
+
+}
+
+
+/*==========================================================
+  RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
 
     .about{
+
         padding:90px 20px;
+
     }
 
-    .section-title{
+    .about-heading{
+
+        margin-bottom:40px;
+
+    }
+
+    .about-heading h2{
+
         font-size:38px;
+
+    }
+
+    .about-content{
+
+        padding:30px 25px 30px 40px;
+
+    }
+
+    .about-accent{
+
+        left:18px;
+
+        top:25px;
+
+        bottom:25px;
+
     }
 
     .about-text{
+
         font-size:16px;
+
+        line-height:1.85;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .about-heading h2{
+
+        font-size:32px;
+
+    }
+
+    .about-content{
+
+        padding:25px 20px 25px 35px;
+
+    }
+
+    .about-accent{
+
+        left:15px;
+
+        width:2px;
+
+    }
+
+    .about-text{
+
+        font-size:15px;
+
         line-height:1.8;
+
     }
 
 }
