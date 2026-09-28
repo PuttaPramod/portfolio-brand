@@ -68,18 +68,18 @@ export class Projects {
       image: 'images/Guidex.png',
 
       description:
-        'Smart career guidance platform for 10th-grade students with interactive quizzes and personalized stream recommendations.',
+        'Developed a platform that helps students explore career paths, discover courses, compare colleges, and access competitive exam information in one place. Integrated personalized career quizzes, saved resources, and a dashboard to help students organize their career exploration and learning journey',
 
       technologies: [
         'Angular',
-        'TypeScript',
-        'Bootstrap',
-        'CSS'
+        'Node JS',
+        'Mongo DB',
+        'Express JS'
       ],
 
-      live: 'https://pkguidesu.netlify.app/',
+      live: 'https://guidex2-0.vercel.app/',
 
-      github: 'https://github.com/PuttaPramod/Guidex'
+      github: 'https://github.com/PuttaPramod/Guidex2.0'
 
     },
 
